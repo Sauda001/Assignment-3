@@ -34,15 +34,22 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              clifford: '#da373d',
-              'primary':'#E76F51',
-              'bg-color-ash' : '#EFEBE3'
+            keyframes: {
+              rotateLoop: {
+                '0%': { transform: 'rotate(0deg)', transformOrigin: 'center' },
+                '25%': { transform: 'rotate(2deg)', transformOrigin: 'center' },
+                '50%': { transform: 'rotate(-2deg)', transformOrigin: 'center' },
+                '75%': { transform: 'rotate(2deg)', transformOrigin: 'center' },
+                '100%': { transform: 'rotate(0deg)', transformOrigin: 'center' }
+              }
             },
-          },
-        },
-      }
-    </script>
+            animation: {
+              'rotate-loop': 'rotateLoop 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite'
+            }
+          }
+        }
+      };
+  </script>
 </head>
 <body>
     <main class="sora-font light">
@@ -90,10 +97,10 @@
                 </div>
             </nav>
             <!-- Banner -->
-            <div class="text-center ">
+            <div class="text-center">
               <!-- text div -->
               <div class="lg:mx-96 md:mx-64">
-                <h1 class="md:mb-8 mb-4 font-bold text-black text-4xl">Freshness <span class="text-color-green">You Can Count</span> On, Prices You’ll Love!</h1>
+                <h1 class="md:mb-8 mb-4 font-bold text-black text-4xl rotate-loop">Freshness <span class="text-color-green">You Can Count</span> On, Prices You’ll Love!</h1>
                 <p class="text-gray-600">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
               </div>
               <!-- Image div -->
@@ -177,7 +184,7 @@
                   <!-- card 1 -->
                   <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                       <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                        <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                        <img class="pt-2" src="./c2-assets/onion2.png" alt="">
                       </div>
                     <div class="">
                       <div class="flex gap-4">
@@ -193,7 +200,7 @@
                   <!-- card 2 -->
                   <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                      <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                      <img class="pt-2" src="./c2-assets/tomato.png" alt="">
                     </div>
                   <div class="">
                     <div class="flex gap-4">
@@ -202,14 +209,14 @@
                       </svg>
                       <div><h1 class="font-normal">4.5</h1></div>
                     </div>
-                    <p class="">Onion 1KG</p>
+                    <p class="">Tomato 1KG</p>
                     <h1 class="font-semibold">$39.99</h1>
                   </div>
                 </div>
                   <!-- card 3 -->
                   <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                      <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                      <img class="pt-2" src="./c2-assets/potato3.png" alt="">
                     </div>
                   <div class="">
                     <div class="flex gap-4">
@@ -218,14 +225,14 @@
                       </svg>
                       <div><h1 class="font-normal">4.5</h1></div>
                     </div>
-                    <p class="">Onion 1KG</p>
+                    <p class="">Potato 1KG</p>
                     <h1 class="font-semibold">$39.99</h1>
                   </div>
                 </div>
                   <!-- card 4 -->
                   <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                      <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                      <img class="pt-2" src="./c2-assets/tomato.png" alt="">
                     </div>
                   <div class="">
                     <div class="flex gap-4">
@@ -234,14 +241,14 @@
                       </svg>
                       <div><h1 class="font-normal">4.5</h1></div>
                     </div>
-                    <p class="">Onion 1KG</p>
-                    <h1 class="font-semibold">$39.99</h1>
+                    <p class="">Tomato 2KG</p>
+                    <h1 class="font-semibold">$69.99</h1>
                   </div>
                 </div>
                   <!-- card 5 -->
                   <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                      <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                      <img class="pt-2" src="./c2-assets/onion2.png" alt="">
                     </div>
                   <div class="">
                     <div class="flex gap-4">
@@ -250,14 +257,14 @@
                       </svg>
                       <div><h1 class="font-normal">4.5</h1></div>
                     </div>
-                    <p class="">Onion 1KG</p>
-                    <h1 class="font-semibold">$39.99</h1>
+                    <p class="">Onion 2KG</p>
+                    <h1 class="font-semibold">$49.99</h1>
                   </div>
                 </div>
                   <!-- card 6 -->
                   <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                      <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                      <img class="pt-2" src="./c2-assets/tomato.png" alt="">
                     </div>
                   <div class="">
                     <div class="flex gap-4">
@@ -266,14 +273,14 @@
                       </svg>
                       <div><h1 class="font-normal">4.5</h1></div>
                     </div>
-                    <p class="">Onion 1KG</p>
-                    <h1 class="font-semibold">$39.99</h1>
+                    <p class="">Tomato 3KG</p>
+                    <h1 class="font-semibold">$79.99</h1>
                   </div>
                 </div>
                   <!-- card 7 -->
                   <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                      <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                      <img class="pt-2" src="./c2-assets/potato3.png" alt="">
                     </div>
                   <div class="">
                     <div class="flex gap-4">
@@ -282,14 +289,14 @@
                       </svg>
                       <div><h1 class="font-normal">4.5</h1></div>
                     </div>
-                    <p class="">Onion 1KG</p>
-                    <h1 class="font-semibold">$39.99</h1>
+                    <p class="">Potato 4KG</p>
+                    <h1 class="font-semibold">$89.99</h1>
                   </div>
                 </div>
                   <!-- card 8 -->
                   <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                      <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                      <img class="pt-2" src="./c2-assets/tomato.png" alt="">
                     </div>
                   <div class="">
                     <div class="flex gap-4">
@@ -298,15 +305,15 @@
                       </svg>
                       <div><h1 class="font-normal">4.5</h1></div>
                     </div>
-                    <p class="">Onion 1KG</p>
-                    <h1 class="font-semibold">$39.99</h1>
+                    <p class="">Tomato 5KG</p>
+                    <h1 class="font-semibold">$89.99</h1>
                   </div>
                 </div>
                   <!-- card 9 -->
                   <div class="hidden md:block">
                     <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                       <div class="bg-color-ash rounded-lg w-1/3 h-16">
-                        <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
+                        <img class="pt-2" src="./c2-assets/onion2.png" alt="">
                       </div>
                     <div class="">
                       <div class="flex gap-4">
@@ -315,8 +322,8 @@
                         </svg>
                         <div><h1 class="font-normal">4.5</h1></div>
                       </div>
-                      <p class="">Onion 1KG</p>
-                      <h1 class="font-semibold">$39.99</h1>
+                      <p class="">Onion 7KG</p>
+                      <h1 class="font-semibold">$59.99</h1>
                     </div>
                   </div>
                   </div>
@@ -333,7 +340,7 @@
             <!-- title -->
             <h1 class="font-bold text-5xl text-black text-center mb-12">Frequently Asked <span class="text-color-green">Questions</span></h1>
             <!-- body -->
-             <div class="md:flex justify-center items-center mb-5">
+             <div class="md:flex justify-center items-center mb-8">
               <!-- image div -->
                <div class="md:w-1/2 mb-4">
                 <img src="./c2-assets/faq.png" alt="">
