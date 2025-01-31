@@ -7,6 +7,27 @@
     <!-- DaisyUI + Tailwind CSS cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- script tag for custom animation -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              rotateLoop: {
+                '0%': { transform: 'rotate(0deg)', transformOrigin: 'center' },
+                '25%': { transform: 'rotate(5deg)', transformOrigin: 'center' },
+                '50%': { transform: 'rotate(0deg)', transformOrigin: 'center' },
+                '75%': { transform: 'rotate(-5deg)', transformOrigin: 'center' },
+                '100%': { transform: 'rotate(0deg)', transformOrigin: 'center' }
+              }
+            },
+            animation: {
+              'rotate-loop': 'rotateLoop 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite'
+            }
+          }
+        }
+      };
+    </script>
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,27 +50,7 @@
             color: rgba(23, 152, 0, 1);
         }
     </style>
-    <!-- script tag for custom color -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            keyframes: {
-              rotateLoop: {
-                '0%': { transform: 'rotate(0deg)', transformOrigin: 'center' },
-                '25%': { transform: 'rotate(2deg)', transformOrigin: 'center' },
-                '50%': { transform: 'rotate(-2deg)', transformOrigin: 'center' },
-                '75%': { transform: 'rotate(2deg)', transformOrigin: 'center' },
-                '100%': { transform: 'rotate(0deg)', transformOrigin: 'center' }
-              }
-            },
-            animation: {
-              'rotate-loop': 'rotateLoop 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite'
-            }
-          }
-        }
-      };
-  </script>
+    
 </head>
 <body>
     <main class="sora-font light">
@@ -94,13 +95,18 @@
                         <button class="btn btn-outline text-color-green mr-3">Login</button>
                         <button class="btn btn-success bg-color-green">Register</button>
                     </div>
+                                  <!-- hamburger Icon -->
+
+                  <div class="lg:hidden">
+                    <svg fill="#179800" width="25px" height="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>icn/menu</title><path d="M2 3h12a1 1 0 0 1 0 2H2a1 1 0 1 1 0-2zm0 4h12a1 1 0 0 1 0 2H2a1 1 0 1 1 0-2zm0 4h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2z" id="a"/></svg>
+                  </div>
                 </div>
             </nav>
             <!-- Banner -->
             <div class="text-center">
               <!-- text div -->
               <div class="lg:mx-96 md:mx-64">
-                <h1 class="md:mb-8 mb-4 font-bold text-black text-4xl rotate-loop">Freshness <span class="text-color-green">You Can Count</span> On, Prices You’ll Love!</h1>
+                <h1 class="md:mb-8 mb-4 font-bold text-black text-4xl animate-rotate-loop ">Freshness <span class="text-color-green">You Can Count</span> On, Prices You’ll Love!</h1>
                 <p class="text-gray-600">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
               </div>
               <!-- Image div -->
@@ -108,6 +114,9 @@
                   <img src="./c2-assets/hero-vegetables.png" alt="">
                 </div>
               </div>
+
+
+
         </header>
 
         <!-- service section -->
