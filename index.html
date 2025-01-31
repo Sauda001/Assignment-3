@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
     <style>
         .sora-font {
         font-family: "Sora", serif;
-        font-optical-sizing: auto;
+        /* font-optical-sizin; */
         font-weight: 400;
         font-style: normal;
         }
@@ -29,11 +29,25 @@
             color: rgba(23, 152, 0, 1);
         }
     </style>
+    <!-- script tag for custom color -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              'primary':'#E76F51',
+              'bg-color-ash' : '#EFEBE3'
+            },
+          },
+        },
+      }
+    </script>
 </head>
 <body>
-    <main class="sora-font">
+    <main class="sora-font light">
         <!-- Header section -->
-        <header class="bg-gradient-to-t from bg-color-ash to-white">
+        <header class="bg-gradient-to-t from bg-[#EFEBE3] to-bg-[#FFFFFF]">
             <!-- Navbar -->
             <nav class="md:mx-28 pt-8 md:mb-24 mb-10">
                 <div class="navbar">
@@ -141,14 +155,14 @@
 
          <!-- Popular Product section -->
         <section>
-          <div class="bg-color-ash mt-12">
+          <div class="bg-color-ash mt-12 mb-12">
             <div class="lg:m-32 py-12 px-4">
               <!-- text section -->
               <h1 class="text-color-green font-bold text-3xl mb-8">Popular Products</h1>
               <!-- card section -->
-              <div class="md:flex gap-4">
+              <div class="md:flex md:gap-4">
                 <!-- big card -->
-                <div class="relative h-80 pl-4 pt-7 rounded-xl space-y-5 bg-gradient-to-br from-green-600 to-green-50 md:w-1/3">
+                <div class="mt-4 relative h-80 pl-4 pt-7 rounded-xl space-y-5 bg-gradient-to-br from-[#53DB3A] to-[#FFFFFF] md:w-1/3">
                   <!-- text -->
                   <h1 class="text-white text-bold text-3xl">30% off</h1>
                   <p>Visit us today and experience the <br> goodness of farm-to-table <br> freshness! 🌱🥕🍅</p>
@@ -159,9 +173,9 @@
                    </div>
                 </div>
                 <!-- small cards -->
-                 <div class="grid grid-cols-2 md:grid-cols-3 md:w-2/3 gap-3 lg:gap-5 mt-6">
+                 <div class="mt-4 grid grid-cols-2 md:grid-cols-3 md:w-2/3 gap-3 lg:gap-4">
                   <!-- card 1 -->
-                  <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                  <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                       <div class="bg-color-ash rounded-lg w-1/3 h-16">
                         <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                       </div>
@@ -177,7 +191,7 @@
                     </div>
                   </div>
                   <!-- card 2 -->
-                  <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                  <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
                       <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                     </div>
@@ -193,7 +207,7 @@
                   </div>
                 </div>
                   <!-- card 3 -->
-                  <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                  <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
                       <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                     </div>
@@ -209,7 +223,7 @@
                   </div>
                 </div>
                   <!-- card 4 -->
-                  <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                  <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
                       <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                     </div>
@@ -225,7 +239,7 @@
                   </div>
                 </div>
                   <!-- card 5 -->
-                  <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                  <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
                       <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                     </div>
@@ -241,7 +255,7 @@
                   </div>
                 </div>
                   <!-- card 6 -->
-                  <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                  <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
                       <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                     </div>
@@ -257,7 +271,7 @@
                   </div>
                 </div>
                   <!-- card 7 -->
-                  <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                  <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
                       <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                     </div>
@@ -273,7 +287,7 @@
                   </div>
                 </div>
                   <!-- card 8 -->
-                  <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                  <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                     <div class="bg-color-ash rounded-lg w-1/3 h-16">
                       <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                     </div>
@@ -290,7 +304,7 @@
                 </div>
                   <!-- card 9 -->
                   <div class="hidden md:block">
-                    <div class="my-auto py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
+                    <div class="py-3 pl-3 md:pr-6 flex gap-4 bg-white rounded-lg">
                       <div class="bg-color-ash rounded-lg w-1/3 h-16">
                         <img class="pt-2" src="./c2-assets/vegetable-busket.png" alt="">
                       </div>
@@ -308,6 +322,42 @@
                   </div>
 
                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Arrival and offer section -->
+        <section>
+          <div class="pb-12 px-4 md:px-32">
+            <h1 class="text-color-green font-bold text-3xl mb-8">Arrival & Offers</h1>
+            <!-- offer card divs -->
+            <div class="text-white md:flex gap-8">
+              <!-- card div 1 -->
+              <div class="md:w[60%] mt-4 rounded-2xl flex gap-2 pl-5 bg-[#115414]">
+                <!-- text div -->
+                 <div class="space-y-5 my-auto">
+                  <img src="./c2-assets/dawat-logo.png" alt="">
+                  <button class="bg-[#63B76D] rounded-lg py-3 px-4">Cook Exotic Dishes</button>
+                  <h1 class="text-lg">UP to <strong>20% OFF</strong></h1>
+                 </div>
+                 <!-- image div -->
+                  <div class="pt-6">
+                    <img class="" src="./c2-assets/dawat-mock-up.png" alt="">
+                  </div>
+              </div>
+              <!-- card div 2 -->
+              <div class="md:w-[40%] mt-4 rounded-2xl flex gap-5 pl-5 bg-[#102861]">
+                <!-- text div -->
+                <div class=" py-3 my-auto ">
+                  <img src="./c2-assets/india-gate-logo.png" alt="">
+                  <button class="mb-2 bg-[#2A4D97] rounded-lg py-3 px-4">World's No.1 Rice</button>
+                  <h1 class="text-lg">UP to <strong>40% OFF</strong></h1>
+                </div>
+                <!-- img div -->
+                <div class="md:pt-6">
+                  <img class="pr-3" src="./c2-assets/india-gate-mock-up.png" alt="">
+                </div>
               </div>
             </div>
           </div>
